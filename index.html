@@ -33,13 +33,13 @@
         Add your email below to stay up to date with announcements and our
         launch details.
       </p>
-      <div class="input-field-container">
+      <form class="input-field-form empty" id="input-field-form">
         <label for="email">
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Email address"
+            placeholder="Email Address"
           />
         </label>
         <svg
@@ -58,7 +58,12 @@
             />
           </g>
         </svg>
-        <button class="btn-submit" id="btn-submit">
+        <button
+          class="btn-submit"
+          id="btn-submit"
+          type="submit"
+          form="input-field-form"
+        >
           <svg
             class="icon-btn-submit"
             xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +78,7 @@
             />
           </svg>
         </button>
-      </div>
+      </form>
     </div>
     <!-- *****scripts***** -->
     <script src="./script.js"></script>
