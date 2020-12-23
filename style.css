@@ -60,6 +60,11 @@ header {
   padding: 2rem 7%;
 }
 
+div.hero {
+  background: url("./images/hero-mobile.jpg") 100% 100% / 100% no-repeat;
+  padding-top: 66.66%;
+}
+
 div.coming-soon {
   padding: 3rem 7% 5rem;
   text-align: center;
@@ -145,4 +150,8 @@ div.coming-soon form.input-field-form button.btn-submit {
   right: 0;
   bottom: 0;
   transform: translateY(3%);
+}
+
+/* *****media queries***** */
+@media only screen and (min-width: 400px) {
 }
