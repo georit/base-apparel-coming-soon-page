@@ -104,7 +104,7 @@ div.coming-soon form.coming-soon-form label input[type="email"] {
   color: var(--desaturated-red);
   font-family: inherit;
   font-size: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 35% 1rem 1.5rem;
   transition: all 0.2s;
 }
 
@@ -135,8 +135,8 @@ div.coming-soon form.coming-soon-form button.btn-submit {
 }
 
 div.coming-soon form.coming-soon-form svg.icon-error {
-  right: 25%;
-  top: 50%;
+  right: 26%;
+  top: 40%;
   transform: translateY(-50%);
   display: none;
 }
@@ -153,8 +153,20 @@ div.coming-soon form.coming-soon-form button.btn-submit {
   cursor: pointer;
   padding: 1rem 2rem;
   right: 0;
-  bottom: 0;
-  transform: translateY(3%);
+  top: 0;
+}
+
+div.coming-soon form.coming-soon-form p.error-msg {
+  color: var(--soft-red);
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  display: none;
+}
+
+div.coming-soon form.coming-soon-form.empty p.error-msg {
+  display: block;
 }
 
 /* *****media queries***** */
