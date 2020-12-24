@@ -49,9 +49,9 @@ img {
 header,
 div.hero,
 div.coming-soon,
-div.coming-soon form.input-field-form,
-div.coming-soon form.input-field-form label,
-div.coming-soon form.input-field-form label input[type="email"] {
+div.coming-soon form.coming-soon-form,
+div.coming-soon form.coming-soon-form label,
+div.coming-soon form.coming-soon-form label input[type="email"] {
   width: 100%;
 }
 
@@ -66,6 +66,8 @@ div.hero {
 }
 
 div.coming-soon {
+  margin: 0 auto;
+  max-width: 450px;
   padding: 3rem 7% 5rem;
   text-align: center;
 }
@@ -90,11 +92,13 @@ div.coming-soon p.coming-soon-text {
   padding-bottom: 2rem;
 }
 
-div.coming-soon form.input-field-form {
+div.coming-soon form.coming-soon-form {
+  margin: 0 auto;
+  max-width: 325px;
   position: relative;
 }
 
-div.coming-soon form.input-field-form label input[type="email"] {
+div.coming-soon form.coming-soon-form label input[type="email"] {
   border: 1px solid hsla(0, 36%, 70%, 0.5);
   border-radius: 25px;
   color: var(--desaturated-red);
@@ -104,47 +108,48 @@ div.coming-soon form.input-field-form label input[type="email"] {
   transition: all 0.2s;
 }
 
-div.coming-soon form.input-field-form label input[type="email"]:focus {
+div.coming-soon form.coming-soon-form label input[type="email"]:focus {
   outline: none;
 }
 
 /* **email input submitted empty** */
-div.coming-soon form.input-field-form.empty label input[type="email"] {
+div.coming-soon form.coming-soon-form.empty label input[type="email"] {
   border: 1px solid var(--soft-red);
 }
 
-div.coming-soon form.input-field-form label ::-webkit-input-placeholder {
+div.coming-soon form.coming-soon-form label ::-webkit-input-placeholder {
   color: hsl(0, 36%, 70%, 0.6);
 }
 
-div.coming-soon form.input-field-form label :-ms-input-placeholder {
+div.coming-soon form.coming-soon-form label :-ms-input-placeholder {
   color: hsl(0, 36%, 70%, 0.6);
 }
 
-div.coming-soon form.input-field-form label ::placeholder {
+div.coming-soon form.coming-soon-form label ::placeholder {
   color: hsl(0, 36%, 70%, 0.6);
 }
 
-div.coming-soon form.input-field-form svg.icon-error,
-div.coming-soon form.input-field-form button.btn-submit {
+div.coming-soon form.coming-soon-form svg.icon-error,
+div.coming-soon form.coming-soon-form button.btn-submit {
   position: absolute;
 }
 
-div.coming-soon form.input-field-form svg.icon-error {
+div.coming-soon form.coming-soon-form svg.icon-error {
   right: 25%;
   top: 50%;
   transform: translateY(-50%);
   display: none;
 }
 
-div.coming-soon form.input-field-form.empty svg.icon-error {
+div.coming-soon form.coming-soon-form.empty svg.icon-error {
   display: block;
 }
 
-div.coming-soon form.input-field-form button.btn-submit {
+div.coming-soon form.coming-soon-form button.btn-submit {
   background: var(--gradient-redish);
   border: none;
   border-radius: 25px;
+  box-shadow: 0 4px 15px hsla(0, 36%, 70%, 0.7);
   cursor: pointer;
   padding: 1rem 2rem;
   right: 0;
@@ -153,5 +158,53 @@ div.coming-soon form.input-field-form button.btn-submit {
 }
 
 /* *****media queries***** */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 0;
+    height: 100vh;
+  }
+
+  header {
+    grid-area: 1 / 1 / 2 / 4;
+    padding-left: 15%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  div.hero {
+    background: url("./images/hero-desktop.jpg") 100% 100% / cover no-repeat;
+    padding-top: 66.66%;
+    grid-area: 1 / 4 / 6 / 6;
+    padding-top: 0;
+    height: 100vh;
+  }
+
+  div.coming-soon {
+    grid-area: 2 / 1 / 6 / 4;
+    margin: 0;
+    padding-left: 15%;
+    text-align: left;
+    max-width: unset;
+  }
+
+  div.coming-soon h1.main-heading {
+    font-size: 3.5rem;
+  }
+
+  div.coming-soon p.coming-soon-text {
+    font-size: 1.2rem;
+    max-width: 450px;
+  }
+
+  div.coming-soon form.coming-soon-form {
+    margin: 0;
+    max-width: 450px;
+  }
+
+  div.coming-soon form.coming-soon-form button.btn-submit {
+    padding: 1rem 3rem;
+  }
 }
