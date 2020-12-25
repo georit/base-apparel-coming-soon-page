@@ -149,11 +149,11 @@ div.coming-soon form.coming-soon-form button.btn-submit {
   background: var(--gradient-redish);
   border: none;
   border-radius: 25px;
-  box-shadow: 0 4px 15px hsla(0, 36%, 70%, 0.7);
+  box-shadow: 0 10px 15px hsla(0, 36%, 70%, 0.5);
   cursor: pointer;
   padding: 1rem 2rem;
   right: 0;
-  top: 0;
+  top: -4%;
 }
 
 div.coming-soon form.coming-soon-form p.error-msg {
@@ -172,6 +172,7 @@ div.coming-soon form.coming-soon-form.empty p.error-msg {
 /* *****media queries***** */
 @media only screen and (min-width: 1000px) {
   body {
+    background: url("./images/bg-pattern-desktop.svg") 0 100% / 60% no-repeat;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -218,5 +219,10 @@ div.coming-soon form.coming-soon-form.empty p.error-msg {
 
   div.coming-soon form.coming-soon-form button.btn-submit {
     padding: 1rem 3rem;
+    transition: all 0.2s;
+  }
+
+  div.coming-soon form.coming-soon-form button.btn-submit:hover {
+    background: linear-gradient(135deg, hsl(0, 80%, 92%), hsl(0, 74%, 80%));
   }
 }
